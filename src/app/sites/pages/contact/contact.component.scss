@@ -1,0 +1,114 @@
+:host {
+  display: block;
+}
+
+/* =========================
+   GLOBAL TYPO (same system)
+========================= */
+.text-gradient-african {
+  background: linear-gradient(to right, #6d28d9, #0ea5e9, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-kicker {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+}
+
+.section-title-lg {
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1;
+  font-weight: 900;
+}
+
+/* =========================
+   ANIMATION SYSTEM
+========================= */
+.contact-card,
+.info-card {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.7s ease;
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* =========================
+   INPUT SYSTEM PREMIUM
+========================= */
+.theme-input {
+  background: var(--surface-tertiary);
+  border: 1px solid var(--border-soft);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.theme-input:focus {
+  outline: none;
+  border-color: rgba(109, 40, 217, 0.4);
+  box-shadow: 0 0 0 4px rgba(109, 40, 217, 0.08);
+}
+
+/* =========================
+   CONTACT CARD HOVER
+========================= */
+.contact-card {
+  transition: all 0.4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 60px 140px rgba(109, 40, 217, 0.15);
+}
+
+/* =========================
+   INFO CARD
+========================= */
+.info-card {
+  transition: all 0.4s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+}
+
+.glass-effect:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   BUTTON LOADING STATE
+========================= */
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+  .section-title-lg,
+  .section-subtext {
+    text-align: center;
+  }
+}

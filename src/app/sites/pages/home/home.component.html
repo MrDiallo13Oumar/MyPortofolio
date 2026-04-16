@@ -1,0 +1,242 @@
+<!-- home.component.html -->
+<div class="page">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero">
+    <div class="container hero__inner">
+
+      <div class="hero__content">
+        <p class="eyebrow animate-fade-up">Base en Guinee &nbsp;·&nbsp; Disponible à l'international</p>
+
+        <h1 class="hero__title animate-fade-up delay-1">
+          <span class="title-line title-line--display">FORGE.</span>
+          <span class="title-line title-line--main">Des plateformes<br>robustes &amp;</span>
+          <span class="title-line title-line--accent">ambitieuses.</span>
+        </h1>
+
+        <p class="hero__lead animate-fade-up delay-2">
+          Ingénieur Full-Stack spécialisé Angular, PHP et MySQL, j'accompagne les organisations
+          qui veulent un produit <strong>fiable, moderne et évolutif</strong>.
+        </p>
+
+        <div class="hero__actions animate-fade-up delay-3">
+          <a class="btn btn--primary" href="mailto:contact@diallooumar.dev">
+            <span class="material-icons" style="font-size:1rem">mail</span>
+            Discuter d'un projet
+          </a>
+          <a class="btn btn--outline" href="#projects">Voir mes réalisations</a>
+        </div>
+      </div>
+
+      <!-- stats sidebar -->
+      <aside class="hero__stats animate-fade-up delay-4">
+        <div class="stat" *ngFor="let s of heroStats">
+          <strong>{{ s.value }}</strong>
+          <span>{{ s.label }}</span>
+        </div>
+        <div class="hero__badge">
+          <span class="pulse"></span>
+          Disponible
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- decorative grid lines -->
+    <div class="hero__grid" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section container">
+    <p class="eyebrow">À propos</p>
+    <div class="about-grid">
+      <div class="about-grid__left">
+        <h2 class="section-headline">Un profil technique<br><span>orienté impact métier</span></h2>
+        <p class="about-text">
+          Développeur web & mobile basé en Guinée, avec une approche orientée produit :
+          comprendre le besoin métier, structurer une architecture propre et livrer une
+          expérience utilisateur fluide.
+        </p>
+        <p class="about-text">
+          J'ai travaillé sur des plateformes critiques — e-santé, civic-tech, logistique minière —
+          en gardant un haut niveau de fiabilité, sécurité et maintenabilité.
+        </p>
+        <div class="about-chips">
+          <span class="chip">Architecture frontend</span>
+          <span class="chip">APIs PHP sécurisées</span>
+          <span class="chip">Modélisation MySQL</span>
+          <span class="chip">UX orientée adoption</span>
+        </div>
+      </div>
+      <div class="about-grid__right">
+        <div class="about-card card" *ngFor="let item of aboutHighlights">
+          <span class="about-card__number">{{ item.number }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider container"></div>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="section container">
+    <p class="eyebrow">Services</p>
+    <h2 class="section-headline">Des offres claires pour<br><span>accélérer votre produit</span></h2>
+    <div class="services-grid">
+      <article class="service-card card" *ngFor="let s of services; let i = index">
+        <span class="service-card__index">0{{ i + 1 }}</span>
+        <span class="material-icons service-card__icon">{{ s.icon }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.detail }}</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider container"></div>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="section container">
+    <p class="eyebrow">Projets</p>
+    <h2 class="section-headline">Études de cas <span>réelles</span></h2>
+    <div class="projects-list">
+      <article class="project-item" *ngFor="let p of projects; let i = index">
+        <div class="project-item__meta">
+          <span class="project-item__num">0{{ i + 1 }}</span>
+          <span class="project-item__context">{{ p.context }}</span>
+        </div>
+        <div class="project-item__body">
+          <h3>{{ p.name }}</h3>
+          <div class="project-item__grid">
+            <div>
+              <p class="item-label">Défi</p>
+              <p>{{ p.challenge }}</p>
+            </div>
+            <div>
+              <p class="item-label">Solution</p>
+              <p>{{ p.solution }}</p>
+            </div>
+            <div>
+              <p class="item-label">Impact</p>
+              <p>{{ p.impact }}</p>
+            </div>
+          </div>
+          <p class="project-item__stack">{{ p.stack }}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider container"></div>
+
+  <!-- ===================== STACK ===================== -->
+  <section id="stack" class="section container">
+    <p class="eyebrow">Stack technique</p>
+    <h2 class="section-headline">Technologies <span>maîtrisées</span></h2>
+    <div class="stack-categories">
+      <div class="stack-cat" *ngFor="let cat of techCategories">
+        <p class="stack-cat__label">{{ cat.label }}</p>
+        <div class="chips-row">
+          <span class="chip" *ngFor="let t of cat.items">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider container"></div>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience" class="section container">
+    <p class="eyebrow">Parcours</p>
+    <h2 class="section-headline">Expérience &amp; <span>progression continue</span></h2>
+    <div class="timeline">
+      <article class="timeline__item" *ngFor="let item of timeline; let last = last">
+        <div class="timeline__line" [class.last]="last"></div>
+        <div class="timeline__dot"></div>
+        <div class="timeline__content card">
+          <p class="timeline__period">{{ item.period }}</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider container"></div>
+
+  <!-- ===================== WORKFLOW ===================== -->
+  <section class="section container">
+    <p class="eyebrow">Workflow</p>
+    <h2 class="section-headline">Comment je <span>collabore avec vous</span></h2>
+    <div class="workflow-steps">
+      <div class="workflow-step" *ngFor="let step of workflowSteps">
+        <span class="workflow-step__num">{{ step.num }}</span>
+        <div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider container"></div>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section container">
+    <p class="eyebrow">Témoignages</p>
+    <h2 class="section-headline">Ce que disent <span>mes clients</span></h2>
+    <div class="testimonials-grid">
+      <article class="testimonial card" *ngFor="let t of testimonials">
+        <span class="testimonial__quote-mark">"</span>
+        <p class="testimonial__text">{{ t.quote }}</p>
+        <footer class="testimonial__author">
+          <span class="dot"></span>
+          <div>
+            <strong>{{ t.author }}</strong>
+            <span>{{ t.role }}</span>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider container"></div>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section container faq">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="section-headline">Questions <span>fréquentes</span></h2>
+    <div class="faq-list">
+      <details class="faq-item" *ngFor="let faq of faqs">
+        <summary>{{ faq.q }}</summary>
+        <p>{{ faq.a }}</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section id="contact" class="cta-section">
+    <div class="container cta-section__inner">
+      <p class="eyebrow">Call to action</p>
+      <h2 class="cta-section__headline">
+        Vous avez un projet ambitieux ?<br>
+        <span>Construisons-le proprement.</span>
+      </h2>
+      <p class="cta-section__sub">
+        Disponible pour des missions de conception, développement et évolution de plateformes web & mobile.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="mailto:contact@diallooumar.dev">
+          <span class="material-icons" style="font-size:1rem">mail</span>
+          Réserver un appel
+        </a>
+        <a class="btn btn--outline" href="https://wa.me/224000000000" target="_blank" rel="noreferrer">
+          Envoyer un brief
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+</div>

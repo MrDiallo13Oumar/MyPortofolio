@@ -1,0 +1,53 @@
+<!-- footer.component.html -->
+<footer class="footer">
+
+  <!-- ticker band -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span *ngFor="let item of tickerItems">{{ item }}</span>
+      <span *ngFor="let item of tickerItems">{{ item }}</span>
+    </div>
+  </div>
+
+  <div class="footer__inner container">
+
+    <div class="footer__brand">
+      <div class="brand-mark">DO</div>
+      <p class="brand-name">Diallo <span>Oumar</span></p>
+      <p class="brand-sub">Full-Stack & DevOps · Conakry, Guinée</p>
+      <p class="brand-tagline">Je forge des plateformes robustes,<br>durables et pensées pour scale.</p>
+    </div>
+
+    <nav class="footer__nav">
+      <p class="footer__nav-label">Navigation</p>
+      <a href="#about">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projets</a>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Parcours</a>
+    </nav>
+
+    <div class="footer__contact">
+      <p class="footer__nav-label">Contact</p>
+      <a href="mailto:contact@diallooumar.dev">contact@diallooumar.dev</a>
+      <a href="https://wa.me/224000000000" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+
+    <div class="footer__cta-block">
+      <p class="footer__nav-label">Disponible</p>
+      <p>Ouvert aux missions freelance et aux collaborations à distance.</p>
+      <a class="btn btn--primary" href="mailto:contact@diallooumar.dev" style="margin-top:1.25rem">
+        Démarrer un projet
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom container">
+    <p>© {{ year }} Diallo Oumar · DevFusion</p>
+    <p>Construit avec Angular · Conakry 🇬🇳</p>
+  </div>
+
+</footer>

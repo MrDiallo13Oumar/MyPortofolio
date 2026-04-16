@@ -1,0 +1,104 @@
+:host {
+  display: block;
+}
+
+/* =========================
+   GLOBAL SYSTEM
+========================= */
+.text-gradient-african {
+  background: linear-gradient(to right, #6d28d9, #0ea5e9, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-kicker {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+}
+
+.section-title-lg {
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* =========================
+   ANIMATION SYSTEM
+========================= */
+.team-card,
+.milestone-item,
+.value-card,
+.stat-card {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.7s ease;
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* =========================
+   CARD SYSTEM
+========================= */
+.theme-card {
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s ease;
+}
+
+.theme-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* =========================
+   TEAM
+========================= */
+.team-card img {
+  transition: transform 0.7s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   VALUE ICON
+========================= */
+.digital-gradient {
+  background: linear-gradient(135deg, #6d28d9 0%, #0ea5e9 100%);
+}
+
+/* =========================
+   MILESTONE DOT LINE FEEL
+========================= */
+.milestone-item {
+  position: relative;
+}
+
+.milestone-item::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 30px;
+  bottom: -30px;
+  width: 2px;
+  background: rgba(109, 40, 217, 0.2);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+  .section-title-lg,
+  .section-subtext {
+    text-align: center;
+  }
+}

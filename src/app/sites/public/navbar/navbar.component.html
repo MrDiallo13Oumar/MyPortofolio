@@ -1,0 +1,25 @@
+<!-- navbar.component.html -->
+<header class="navbar" [class.scrolled]="scrolled">
+  <div class="navbar__inner container">
+
+    <a class="navbar__logo" routerLink="/sites/home">
+      <span class="logo-mark">DO</span>
+      <span class="logo-text">Diallo<em>Oumar</em></span>
+    </a>
+
+    <nav class="navbar__links" [class.open]="menuOpen">
+      <!-- <a *ngFor="let link of navLinks" [href]="link.href" (click)="menuOpen = false">
+        {{ link.label }}
+      </a> -->
+    </nav>
+
+    <a class="btn btn--primary navbar__cta" href="mailto:contact@diallooumar.dev">
+      Contact
+    </a>
+
+    <button class="navbar__burger" (click)="menuOpen = !menuOpen" aria-label="Menu">
+      <span [class.open]="menuOpen"></span>
+    </button>
+
+  </div>
+</header>
