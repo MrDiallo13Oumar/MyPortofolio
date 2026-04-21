@@ -8,12 +8,28 @@
     </a>
 
     <nav class="navbar__links" [class.open]="menuOpen">
-      <!-- <a *ngFor="let link of navLinks" [href]="link.href" (click)="menuOpen = false">
-        {{ link.label }}
-      </a> -->
-    </nav>
+  <ng-container *ngFor="let link of navLinks">
+    
+    <!-- Lien INTERNE (Pages du site) -->
+    <a *ngIf="!link.isExternal" 
+       [routerLink]="link.href" 
+       (click)="menuOpen = false">
+      {{ link.label }}
+    </a>
 
-    <a class="btn btn--primary navbar__cta" href="mailto:contact@diallooumar.dev">
+    <!-- Lien EXTERNE (WhatsApp) -->
+    <a *ngIf="link.isExternal" 
+       [href]="link.href" 
+       target="_blank" 
+       (click)="menuOpen = false">
+      {{ link.label }}
+    </a>
+
+  </ng-container>
+</nav>
+
+
+    <a class="btn btn--primary navbar__cta" href="mailto:do25595@gmail.com">
       Contact
     </a>
 

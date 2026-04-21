@@ -1,0 +1,85 @@
+<div class="projects-page">
+
+    <!-- ================= HERO ================= -->
+    <section class="projects-hero container">
+        <p class="eyebrow">Portfolio</p>
+        <h1 class="projects-title">
+            Mes projets<br><span>réels & concrets</span>
+        </h1>
+        <p class="projects-sub">
+            Une sélection de plateformes, applications et expérimentations
+            que j’ai conçues et développées.
+        </p>
+    </section>
+
+    <!-- ================= MAJEURS ================= -->
+    <section class="section container">
+        <p class="eyebrow">Projets majeurs</p>
+        <h2 class="section-headline">Études de cas</h2>
+
+        <a class="featured-project" *ngFor="let p of featuredProjects" [href]="p.link" target="_blank">
+
+            <div class="featured-project__content">
+                <span class="context">{{ p.context }}</span>
+                <h3>{{ p.name }}</h3>
+
+                <p class="desc">{{ p.description }}</p>
+
+                <div class="grid">
+                    <div>
+                        <strong>Défi</strong>
+                        <p>{{ p.challenge }}</p>
+                    </div>
+                    <div>
+                        <strong>Solution</strong>
+                        <p>{{ p.solution }}</p>
+                    </div>
+                    <div>
+                        <strong>Impact</strong>
+                        <p>{{ p.impact }}</p>
+                    </div>
+                </div>
+
+                <p class="stack">{{ p.stack }}</p>
+            </div>
+
+        </a>
+    </section>
+
+    <!-- ================= AUTRES ================= -->
+    <section class="section container">
+        <p class="eyebrow">Autres réalisations</p>
+        <h2 class="section-headline">Projets divers</h2>
+
+        <div class="projects-grid">
+            <a class="project-card card" *ngFor="let p of otherProjects" [href]="p.link" target="_blank">
+                <h3>{{ p.name }}</h3>
+                <p>{{ p.desc }}</p>
+                <span class="stack">{{ p.stack }}</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= MINI ================= -->
+    <section class="section container">
+        <p class="eyebrow">Expérimentations</p>
+        <h2 class="section-headline">Mini projets & tests</h2>
+
+        <div class="mini-grid">
+            <a class="mini-card" *ngFor="let p of miniProjects" [href]="p.link" target="_blank">
+                {{ p.name }}
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section container text-center">
+        <div class="card">
+            <h2>Tu veux un projet comme ça ?</h2>
+            <p>Je peux t’aider à le concevoir et le développer proprement.</p>
+            <br>
+            <a class="btn btn--primary">Discuter</a>
+        </div>
+    </section>
+
+</div>

@@ -1,0 +1,97 @@
+<div class="parcours-page">
+
+  <!-- HERO -->
+  <section class="parcours-hero container">
+    <p class="eyebrow">Parcours</p>
+
+    <h1 class="parcours-title">
+      De développeur junior à<br>
+      <span>créateur de plateformes réelles</span>
+    </h1>
+
+    <p class="parcours-sub">
+      Depuis 2022, je conçois et développe des applications web et mobile
+      pour des entreprises et organisations, avec une approche orientée produit,
+      performance et fiabilité.
+    </p>
+  </section>
+
+  <!-- TIMELINE PRO -->
+  <section class="section container">
+    <p class="eyebrow">Expérience</p>
+    <h2 class="section-headline">Mon évolution professionnelle</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item" *ngFor="let job of experiences">
+
+        <div class="timeline-left">
+          <span class="date">{{ job.period }}</span>
+        </div>
+
+        <div class="timeline-content card">
+          <h3>{{ job.role }}</h3>
+          <span class="company">{{ job.company }}</span>
+
+          <ul>
+            <li *ngFor="let task of job.tasks">{{ task }}</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STACK RÉEL -->
+  <section class="section container">
+    <p class="eyebrow">Compétences</p>
+    <h2 class="section-headline">Stack technique maîtrisée</h2>
+
+    <div class="skills-grid">
+
+      <div class="card">
+        <h3>Frontend</h3>
+        <p>Angular, Ionic, HTML5, CSS3, UX moderne</p>
+      </div>
+
+      <div class="card">
+        <h3>Backend</h3>
+        <p>PHP, APIs REST, sécurité, JWT</p>
+      </div>
+
+      <div class="card">
+        <h3>Database</h3>
+        <p>MySQL, modélisation, optimisation</p>
+      </div>
+
+      <div class="card">
+        <h3>DevOps</h3>
+        <p>Git, CI/CD, notions Google Cloud</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ÉDUCATION -->
+  <section class="section container">
+    <p class="eyebrow">Formation</p>
+    <h2 class="section-headline">Parcours académique</h2>
+
+    <div class="education-grid">
+
+      <div class="card">
+        <h3>Université Ahmadou Dieng</h3>
+        <p>Génie Informatique (2019 - 2023)</p>
+      </div>
+
+      <div class="card">
+        <h3>GS Sansy Kaba Diakité</h3>
+        <p>Terminale (2018 - 2019)</p>
+      </div>
+
+    </div>
+  </section>
+
+</div>

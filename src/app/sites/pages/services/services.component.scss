@@ -1,0 +1,143 @@
+.projects-hero {
+  padding-top: 120px;
+  max-width: 800px;
+
+  .projects-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: var(--font-heading);
+    line-height: 1.1;
+
+    span {
+      color: var(--gold);
+    }
+  }
+
+  .projects-sub {
+    color: var(--soft);
+    margin-top: 1rem;
+  }
+}
+
+/* featured */
+.featured-project {
+  margin-top: 4rem;
+  padding: 2rem;
+  border-left: 3px solid var(--gold);
+  background: var(--card);
+
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .stack {
+    margin-top: 1rem;
+    color: var(--gold);
+  }
+}
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* mini */
+.mini-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mini-card {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}/* rendre les liens propres */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* featured clickable */
+.featured-project {
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: var(--radius-lg);
+}
+
+.featured-project:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+}
+
+/* project card hover */
+.project-card {
+  display: block;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+/* mini hover */
+.mini-card {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mini-card:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.featured-project {
+  display: block;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+  position: relative;
+}
+
+.featured-project:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* header */
+.featured-project__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.visit {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.featured-project:hover .visit {
+  color: var(--gold);
+  opacity: 1;
+}
+
+/* stack */
+.stack {
+  margin-top: 1rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+}

@@ -6,16 +6,14 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-   scrolled = false;
+  scrolled = false;
   menuOpen = false;
-
   navLinks = [
-    { label: 'À propos',   href: '#about'      },
-    { label: 'Services',   href: '#services'   },
-    { label: 'Projets',    href: '#projects'   },
-    { label: 'Stack',      href: '#stack'      },
-    { label: 'Parcours',   href: '#experience' },
+    { label: 'Projets', href: '/sites/projets', isExternal: false },
+    { label: 'Parcours', href: '/sites/experience', isExternal: false },
+    { label: 'WhatsApp', href: 'https://wa.me/224624226778', isExternal: true },
   ];
+
 
   @HostListener('window:scroll')
   onScroll() {

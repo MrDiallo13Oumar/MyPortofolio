@@ -2,7 +2,7 @@
    DESIGN TOKENS — INDUSTRIAL NOIR FORGE
    ============================================================ */
 :root {
-  --bg:           #0d0d0d;
+  --bg:           #212020;
   --surface:      #141414;
   --card:         #1a1a1a;
   --card-hover:   #1f1f1f;
@@ -29,6 +29,11 @@
 
   --container:    1180px;
   --section-gap:  120px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.25);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.35);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.45);
+
+  --glass: rgba(255,255,255,0.02);
 }
 
 /* ============================================================
@@ -176,6 +181,63 @@ ul, ol { list-style: none; }
   margin-block: var(--section-gap);
 }
 
+/* surfaces améliorées */
+.card {
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.02),
+    rgba(0,0,0,0.4)
+  );
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* hover plus premium */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* titres plus impactants */
+.section-headline {
+  max-width: 800px;
+}
+
+/* spacing amélioré */
+.section {
+  padding-block: clamp(80px, 10vw, 140px);
+}
+
+/* chips améliorés */
+.chip {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--border-soft);
+  transition: var(--transition);
+}
+.chip:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* glow subtil global */
+.gold-glow {
+  position: relative;
+}
+.gold-glow::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(circle, var(--gold-glow), transparent 70%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.gold-glow:hover::after {
+  opacity: 0.4;
+}
 /* ============================================================
    ANIMATIONS
    ============================================================ */
