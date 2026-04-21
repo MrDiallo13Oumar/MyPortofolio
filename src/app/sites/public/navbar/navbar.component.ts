@@ -11,7 +11,7 @@ export class NavbarComponent {
   navLinks = [
     { label: 'Projets', href: '/sites/projets', isExternal: false },
     { label: 'Parcours', href: '/sites/experience', isExternal: false },
-    { label: 'WhatsApp', href: 'https://wa.me/224624226778', isExternal: true },
+    // { label: 'WhatsApp', href: 'https://wa.me/224624226778', isExternal: true },
   ];
 
 
